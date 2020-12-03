@@ -3,7 +3,18 @@ body{
     background: #ffffff;
     font-family: "Roboto";
 }
-
+.btn-grey{
+    padding: 9px 15px;
+    background: #b9bdbf;
+    color: #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.btn-grey:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
 /****Common style ****/
 
 /*** Navi ***/
@@ -28,4 +39,45 @@ body{
     align-items: center;
     color: #8e6f6f;
 }
+@media (max-width: 575px){
+    .carousel-inner div{
+        height: 200px;
+    } 
+}
 /*** Masthead ***/
+
+/*** About us ***/
+
+.about-us .about-wrapper{
+    background: #bebeb3;
+}
+.about-us-title{
+    padding: 20px 0px;
+}
+.icon-wrapper{
+    max-width: 100px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    height: 100px;
+}
+.card-wrapper .card{
+   height: 100%;
+}
+/*** About us ***/
+
+/*** Contact us ***/
+#mapid { min-height: 300px; }
+/*** Contact us ***/
+
+/*** Footer ***/
+#footer{
+    padding: 20px;
+    background: #000000;
+   
+}
+#footer p{
+    color: #ffffff;
+    font-size: 12px;
+}
+/*** Footer ***/

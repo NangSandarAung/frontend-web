@@ -2,7 +2,13 @@
 <html>
 
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link
+        href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
+        rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
@@ -13,7 +19,9 @@
         <!-- Navigation - Start -->
         <section id="navi">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><h1>Arkadia</h1></a>
+                <a class="navbar-brand" href="#">
+                    <h1>Arkadia</h1>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,7 +40,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact us</a>
                         </li>
-                       
+
                     </ul>
                 </div>
             </nav>
@@ -44,37 +52,299 @@
             <div class="masthead-wrapper">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <div class="carousel-slide-1">
-                            <div class="text-wrapper">
-                                <h2>Welcome to Arkadia</h2>
-                            </div>
-                          </div>                       
-                      </div>
-                      <div class="carousel-item">
-                        <div class="carousel-slide-2">
-                            <div class="text-wrapper">
-                                <h2>12.12 Deals</h2>
+                        <div class="carousel-item active">
+                            <div class="carousel-slide-1">
+                                <div class="text-wrapper">
+                                    <h2>Welcome to Arkadia</h2>
+                                </div>
                             </div>
                         </div>
-                      </div>                      
+                        <div class="carousel-item">
+                            <div class="carousel-slide-2">
+                                <div class="text-wrapper">
+                                    <h2>12.12 Deals</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
         </section>
         <!-- Masthead - End -->
-
         <!-- Deals - Start -->
+        <section id="deals">
+            <div class="deals-wrapper mb-5">
+                <div class="container">
+                    <div class="row deal-inner-container">
+                        <div class="col-12 text-center mt-5 mb-5">
+                            <h3>12.12 Deals</h3>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="#" data-toggle="modal" data-target="#challenger">Find out
+                                    more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Dyson_600x436px-v11.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Dyson</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="#" data-toggle="modal" data-target="#dyson">Find out
+                                    more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="https://www.hachi.tech/uob-promotion"
+                                    target="_blank">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="https://www.hachi.tech/uob-promotion"
+                                    target="_blank">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="https://www.hachi.tech/uob-promotion"
+                                    target="_blank">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="https://www.hachi.tech/uob-promotion"
+                                    target="_blank">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="https://www.hachi.tech/uob-promotion"
+                                    target="_blank">Find out more</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-3">
+                            <div class="img-wrapper mb-2">
+                                <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                            </div>
+                            <div class="text-wrapper text-center">
+                                <h5>Challenger</h5>
+                                <p class="desc">15% off with min. S$500 spend</p>
+                                <a class="btn-grey mb-5" href="https://www.hachi.tech/uob-promotion"
+                                    target="_blank">Find out more</a>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Deals - End -->
+
+        <!-- About Us - Start -->
+        <section class="about-us">
+            <div class="about-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mb-3">
+                            <h3 class="about-us-title">About Us</h3>
+                        </div>
+                    </div>
+                    <div class="row card-wrapper">
+                        <div class="col-sm-4 mb-5">
+                            <div class="card text-center">
+                                <div class="icon-wrapper mt-2">
+                                    <img src="/img/aboutus/pig.png" class="card-img-top img-fluid" alt="pig image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">We're Free</h5>
+                                    <p class="card-text">
+                                        We spent thousands of hours creating on algorithm that does this for
+                                        you in seconds. We collect a small fee from the professional after they meet
+                                        your
+                                        expectations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mb-5">
+                            <div class=" card text-center">
+                                <div class="icon-wrapper mt-2">
+                                    <img src="/img/aboutus/arrow.png" class="card-img-top img-fluid" alt="pig image">
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"> We're Unbiased </h5>
+                                    <p class="card-text"> We don't accept ads from anyone. We use actual data to match
+                                        you who the best person for each job and we do it sincerely</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mb-5">
+                            <div class=" card text-center">
+                                <div class="icon-wrapper mt-2">
+                                    <img src="/img/aboutus/rocket.png" class="card-img-top img-fluid" alt="rocket">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"> We Guide you </h5>
+                                    <p class="card-text">Buying or selling a home is often the largest transaction
+                                        anyone does in their life. we guide you through the process so that you can be
+                                        confident in reaching your dream outcome. </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- About Us - End -->
+
+        <!-- Contact Us - Start -->
+        <section class="contact-us">
+            <div class="contact-wrapper">
+                <div class="container mb-5">
+                    <div class="row">
+                        <div class="col-12 text-center mb-3">
+                            <h3 class="about-us-title">Contact Us</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 map">
+                            <div id="mapid"></div>
+                        </div>
+
+                        <form class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telephone</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Contact Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email@email.com"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Type your Message</label>
+                                <textarea class="form-control" id="message" rows="3"
+                                    placeholder="Input message..."></textarea>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Contact Us</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Contact Us - End -->
+        <!-- Footer - Start-->
+        <section id="footer">
+            <footer>
+                <div class="container">
+                    <div class="col-12 text-center">
+                        <p class="text-small">Copyright © 2020 Arkadia Co. Reg. No. 193500026Z. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+        <!-- Footer - End-->
+        <!--Modals - Start-->
+        <div class="modal fade" id="challenger" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="challengerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="challengerLabel">Challenger</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-fluid" src="/img/deals/Challenger.jpg" />
+                        <p class="mt-3">
+                            15% off with min. S$500 spend
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="dyson" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="dysonLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dysonLabel">Dyson</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-fluid" src="/img/deals/Dyson_600x436px-v11.jpg" />
+                        <p class="mt-3">
+                            15% off with min. S$500 spend
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modals - End-->
     </div>
 
 
@@ -87,6 +357,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
