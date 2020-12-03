@@ -1,0 +1,31 @@
+/****Common style ****/
+body{
+    background: #ffffff;
+    font-family: "Roboto";
+}
+
+/****Common style ****/
+
+/*** Navi ***/
+.navbar{
+    background-color: rgba(10, 10, 10, 0.3);
+}
+/*** Navi ***/
+
+/*** Masthead ***/
+.carousel-inner div{
+    height: 400px;
+}
+.carousel-slide-1{
+    background: url(/img/home-bg.jpg);
+}
+.carousel-slide-2{
+    background: url(/img/about-bg.jpg);
+}
+.carousel-inner .text-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8e6f6f;
+}
+/*** Masthead ***/
